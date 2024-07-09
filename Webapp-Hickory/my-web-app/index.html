@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hickory BBQ Joint - Order Status</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDhzLZ5SGW8pRyy5NLk-KkIZtt1oQQsD9w",
+            authDomain: "webapp-hickory.firebaseapp.com",
+            projectId: "webapp-hickory",
+            storageBucket: "webapp-hickory.appspot.com",
+            messagingSenderId: "153752530318",
+            appId: "1:153752530318:web:76659374a777de68fd88df",
+            measurementId: "G-Y3YLWXWE1Q"
+        };
+        const app = firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+</head>
+<body>
+    <div id="video-container">
+        <iframe id="background-video" src="https://www.youtube.com/embed/jReeajPdgSM?autoplay=1&mute=1&loop=1&playlist=jReeajPdgSM&vq=hd1080" frameborder="0" allow="autoplay; loop;" allowfullscreen></iframe>
+    </div>
+    <div id="orders-container">
+        <div id="orders">
+            <img src="logo.png" alt="Hickory BBQ Joint Logo" class="logo">
+            <h2>Orders</h2>
+            <div id="order-cards">
+                <ul id="orders-list" class="order-list"></ul>
+            </div>
+        </div>
+    </div>
+    <div id="order-ready-overlay" onclick="hideOrderReadyOverlay()">
+        <div id="order-ready-content"></div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
